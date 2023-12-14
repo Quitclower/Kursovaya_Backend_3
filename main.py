@@ -1,7 +1,7 @@
 import json
 from Kursovaya_Backend import read_json, filter_data, sort_data, edit_data, secret_number, print_operations
 
-with open("operations.json", encoding="utf-8") as f:
+with open("utils/operations.json", encoding="utf-8") as f:
     data = json.load(f)
 
 
