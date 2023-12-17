@@ -1,7 +1,7 @@
 import json
 from Kursovaya_Backend import read_json, filter_data, sort_data, edit_data, secret_number, print_operations
 
-with open("utils/operations.json", encoding="utf-8") as f:
+with open("operations.json", encoding="utf-8") as f:
     data = json.load(f)
 
 
@@ -10,10 +10,10 @@ def print_operations1(data) -> list:
     for operation in last_operations:
         date = operation['date']
         description = operation['description']
-        from_account = operation['from']
+        from_account = operation.get('from')
         to_account = operation['to']
-        amount = operation['amount']
-        currency = operation['currency']
+        amount = operation['operationAmount']['amount']
+        currency = operation['operationAmount']['currency']
         print(f'{date} {description}')
         print(f'{from_account} -> {to_account}')
         print(f'{amount} {currency}')
