@@ -4,6 +4,8 @@ from Kursovaya_Backend import read_json, filter_data, sort_data, edit_data, secr
 with open("operations.json", encoding="utf-8") as f:
     data = json.load(f)
 
+# Основа
+
 
 def print_operations1(data) -> list:
     last_operations = data[:5]  # Получаем последние 5 операций
