@@ -12,7 +12,7 @@ def print_operations1(data) -> list:
     for operation in last_operations:
         date = operation['date']
         description = operation['description']
-        from_account = operation.get('from')
+        from_account = secret_number("from")
         to_account = operation['to']
         amount = operation['operationAmount']['amount']
         currency = operation['operationAmount']['currency']
